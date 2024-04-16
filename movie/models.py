@@ -34,3 +34,5 @@ class Film(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super().save()
+
+        sdfghjkl
