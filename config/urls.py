@@ -21,8 +21,8 @@ from drf_yasg.views import get_schema_view
 
 schema_view = get_schema_view(
     openapi.Info(
-        title='Cinema_hack',
-        description='makers',
+        title='cinematika',
+        description='movies',
         default_version='v1'
     ),
     public=True
@@ -32,5 +32,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('swagger')),
-    path('api/v1/', include('movie.urls')),
+    # path('api/v1/', include('movie.urls')),
+    path('api/v1/account/', include('account.urls')),
+
 ]
