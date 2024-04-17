@@ -2,7 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from drf_yasg.utils import swagger_auto_schema
-from .serializers import RegisterSerializer
+from .serializers import RegisterSerializer, ForgotPasswordSerializer
 
 
 User = get_user_model()
@@ -29,4 +29,16 @@ class ActivationView(APIView):
         user.save()
         return Response(
             'Аккаунт успешно активирован', status=200
+        )
+    
+
+class ForgotPasswordView(APIView):
+    @swagger_auto_schema(request_body=ForgotPasswordSerializer())
+
+    def post(self, request):
+        serializer = ForgotPasswordSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.gen_new_password()
+        return Response(
+            'Новый пароль отправлен вам на почту'
         )
