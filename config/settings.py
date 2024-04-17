@@ -162,5 +162,43 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1)
 }
 
+import logging
+
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+
+    "formatters": {
+        "main_formatter":{
+            "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
+            "style": "{",
+        },
+
+    },
+
+    "handlers": {
+        "file": {
+            "class": "logging.FileHandler",
+            "formatter": "main_formatter",
+            "filename": "debug.log"
+        }
+    },
+
+    "loggers": {
+        "django.request": {
+            "handlers": ["file"],
+            "level": "WARNING",
+            "propagate": True
+        }
+    }
+
+}
+
+
 CELERY_BROKER_URL = 'redis://localhost:6379'
 CELERY_RESULT_BACKEND = 'redis://localhost:6379'
+
+CORS_ALLOWED_ORIGINS = ['http://localhost:8000', 'http://localhost:5000']
+
+CORS_ALLOWED_METHODS = ['GET', 'POST', 'DELETE', 'PUT', 'PATCH']

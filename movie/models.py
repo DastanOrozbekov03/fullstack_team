@@ -2,6 +2,7 @@ from django.db import models
 from slugify import slugify
 from django.contrib.auth import get_user_model
 
+
 User = get_user_model()
 
 class Category(models.Model):
@@ -38,6 +39,11 @@ class Film(models.Model):
             self.slug = slugify(self.title)
         super().save()
 
+
+class Favorite(models.Model):
+    author = models.ForeignKey(User, related_name='favorites', on_delete=models.CASCADE)
+    film = models.ForeignKey(Film, related_name='favorites', on_delete=models.CASCADE)
+
 class Comment(models.Model):
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comment')
     film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='comments')
@@ -57,3 +63,4 @@ class Like(models.Model):
 
     def str(self) -> str:
         return f'liked by {self.author.email}'
+

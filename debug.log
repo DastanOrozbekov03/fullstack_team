@@ -1,0 +1,264 @@
+WARNING -> 2024-04-17 13:14:26,343 -> log -> log.py -> Not Found: /favicon.ico
+WARNING -> 2024-04-17 13:15:55,567 -> log -> log.py -> Not Found: /api/v1/favorite/
+WARNING -> 2024-04-17 13:16:02,429 -> log -> log.py -> Not Found: /api/v1/favorite/
+WARNING -> 2024-04-17 13:16:08,939 -> log -> log.py -> Not Found: /api/v1/favorite/
+WARNING -> 2024-04-17 13:16:38,273 -> log -> log.py -> Bad Request: /api/v1/favorit/
+WARNING -> 2024-04-17 13:17:47,047 -> log -> log.py -> Bad Request: /api/v1/favorit/
+ERROR -> 2024-04-17 13:18:16,967 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/generics.py", line 114, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'FilmSerializers' object is not callable
+ERROR -> 2024-04-17 13:18:38,432 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/generics.py", line 114, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'FilmSerializers' object is not callable
+ERROR -> 2024-04-17 13:18:39,892 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/generics.py", line 114, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'FilmSerializers' object is not callable
+ERROR -> 2024-04-17 13:20:46,292 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/generics.py", line 114, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'FilmSerializers' object is not callable
+ERROR -> 2024-04-17 13:20:51,433 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 17, in create
+    serializer = self.get_serializer(data=request.data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/generics.py", line 114, in get_serializer
+    return serializer_class(*args, **kwargs)
+TypeError: 'FilmSerializers' object is not callable
+WARNING -> 2024-04-17 13:21:18,788 -> log -> log.py -> Bad Request: /api/v1/films/
+ERROR -> 2024-04-17 13:21:46,814 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "category_id" violates not-null constraint
+DETAIL:  Failing row contains (asdas, asdas, , , , , , , 2020, assad, , null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/movie/models.py", line 40, in save
+    super().save()
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "category_id" violates not-null constraint
+DETAIL:  Failing row contains (asdas, asdas, , , , , , , 2020, assad, , null).
+
+WARNING -> 2024-04-17 13:22:26,998 -> log -> log.py -> Bad Request: /api/v1/categories/
+WARNING -> 2024-04-17 13:22:55,362 -> log -> log.py -> Bad Request: /api/v1/films/
+ERROR -> 2024-04-17 13:23:08,022 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "category_id" violates not-null constraint
+DETAIL:  Failing row contains (skkkkkkk, skkkkkkk, , , , , , , 2020, assad, , null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/views/decorators/csrf.py", line 56, in wrapper_view
+    return view_func(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/movie/models.py", line 40, in save
+    super().save()
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/hello/Desktop/pyev.32/projects/fullstack_team/venv/lib/python3.8/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "category_id" violates not-null constraint
+DETAIL:  Failing row contains (skkkkkkk, skkkkkkk, , , , , , , 2020, assad, , null).
+
