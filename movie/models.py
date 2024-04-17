@@ -1,5 +1,9 @@
 from django.db import models
 from slugify import slugify
+from django.contrib.auth import get_user_model
+
+
+User = get_user_model()
 
 class Category(models.Model):
     title = models.CharField(max_length=40, unique=True)
@@ -35,4 +39,6 @@ class Film(models.Model):
             self.slug = slugify(self.title)
         super().save()
 
-        sdfghjkl
+class Favorite(models.Model):
+    author = models.ForeignKey(User, related_name='favorites', on_delete=models.CASCADE)
+    film = models.ForeignKey(Film, related_name='favorites', on_delete=models.CASCADE)
