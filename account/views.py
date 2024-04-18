@@ -2,7 +2,8 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
 from drf_yasg.utils import swagger_auto_schema
-from .serializers import RegisterSerializer, ForgotPasswordSerializer
+from .serializers import RegisterSerializer, ForgotPasswordSerializer, ChangePasswordSerializer
+from rest_framework.permissions import IsAuthenticated
 
 
 User = get_user_model()
@@ -41,4 +42,19 @@ class ForgotPasswordView(APIView):
         serializer.gen_new_password()
         return Response(
             'Новый пароль отправлен вам на почту'
+        )
+    
+
+class ChangePasswordView(APIView):
+
+    permission_classes = [IsAuthenticated]
+    @swagger_auto_schema(request_body=ChangePasswordSerializer())
+
+    
+    def patch(self, request):
+        serializer = ChangePasswordSerializer(data=request.data, context={'request': request})
+        serializer.is_valid(raise_exception=True)
+        serializer.set_new_password()
+        return Response(
+            'Пароль успешно изменен'
         )

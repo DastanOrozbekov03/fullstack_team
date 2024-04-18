@@ -58,3 +58,38 @@ class ForgotPasswordSerializer(serializers.Serializer):
             'test@gmail.com',
             [user.email]
         )
+
+
+class ChangePasswordSerializer(serializers.Serializer):
+    old_password = serializers.CharField(min_length=6, required=True)
+    new_password = serializers.CharField(min_length=6, required=True)
+    new_password_confirm = serializers.CharField(min_length=6, required=True)
+
+    def validate_old_password(self, old_pass):
+        user = self.context.get('request').user
+        if not user.check_password(old_pass):
+            raise serializers.ValidationError(
+                'Вы ввели неправильный пароль'
+            )
+        return old_pass
+        
+        
+    def validate(self, attrs):
+        password = attrs.get('new_password')
+        password_confirm = attrs.pop('new_password_confirm')
+        old = attrs.get('old_password')
+        if old == password:
+            raise serializers.ValidationError(
+                'Пароли совпадают'
+            )
+        if password != password_confirm:
+            raise serializers.ValidationError(
+                'Пароли не совпадают'
+            )
+        return attrs
+    
+    def set_new_password(self):
+        new_pass = self.validated_data.get('new_password')
+        user = self.context.get('request').user
+        user.set_password(new_pass)
+        user.save()
