@@ -4,8 +4,11 @@ from .utils import send_activation_code
 # from .tasks import send_activation_code_celery
 from django.core.mail import send_mail
 from django.utils.crypto import get_random_string
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> master
 
 
 User = get_user_model()
@@ -58,6 +61,7 @@ class ForgotPasswordSerializer(serializers.Serializer):
             'test@gmail.com',
             [user.email]
         )
+<<<<<<< HEAD
 
 
 class ChangePasswordSerializer(serializers.Serializer):
@@ -93,3 +97,5 @@ class ChangePasswordSerializer(serializers.Serializer):
         user = self.context.get('request').user
         user.set_password(new_pass)
         user.save()
+=======
+>>>>>>> master

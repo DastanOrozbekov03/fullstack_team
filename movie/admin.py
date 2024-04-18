@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Film
-
+from .models import Film, Like, Comment, Category, Favorite
 
 
 
@@ -12,3 +11,8 @@ class FilmAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Film, FilmAdmin)
+admin.site.register(Film)
+admin.site.register(Like)
+admin.site.register(Comment)
+admin.site.register(Category)
+admin.site.register(Favorite)
