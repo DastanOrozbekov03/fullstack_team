@@ -24,7 +24,7 @@ class Film(models.Model):
     description = models.TextField(blank=True)
     tagline = models.TextField(blank=True)
     image = models.ImageField(upload_to='media/', blank=True)
-    country = models.CharField(max_length=100, unique=True)
+    country = models.CharField(max_length=100)
     actors = models.CharField(max_length=500, blank=True)
     stage_director = models.CharField(max_length=100)
     year = models.PositiveIntegerField(default=2020)

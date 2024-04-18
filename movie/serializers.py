@@ -1,7 +1,6 @@
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
 from .models import Film, Category, Like, Comment
 from rest_framework import serializers
-
 from .models import Film, Category, Favorite
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
 
@@ -26,8 +25,7 @@ class FavoriteSerializer(ModelSerializer):
     def create(self, validated_data):
         author = self.context.get('request').user
         validated_data['author'] = author
-
-        fields = '__all__'
+        return super().create(validated_data)
 
 class FilmListSerializers(ModelSerializer):
     class Meta:

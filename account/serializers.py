@@ -1,8 +1,9 @@
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
 from .utils import send_activation_code
-from .tasks import send_activation_code_celery
-
+# from .tasks import send_activation_code_celery
+from django.core.mail import send_mail
+from django.utils.crypto import get_random_string
 
 
 User = get_user_model()
@@ -32,4 +33,26 @@ class RegisterSerializer(serializers.ModelSerializer):
         return user
     
 
+class ForgotPasswordSerializer(serializers.Serializer):
+    email = serializers.EmailField(required=True)
 
+    def validate_email(self, email):
+        if not User.objects.filter(email=email).exists():
+            raise serializers.ValidationError(
+                'Пользователь не найден'
+            )
+        return email
+    
+    def gen_new_password(self):
+        email = self.validated_data.get('email')
+        user = User.objects.get(email=email)
+        new_pass = get_random_string(length=6, allowed_chars='0123456789')
+        user.set_password(new_pass)
+        user.save()
+
+        send_mail(
+            'Восстановление пароля',
+            f'Ваш новый пароль : {new_pass}',
+            'test@gmail.com',
+            [user.email]
+        )

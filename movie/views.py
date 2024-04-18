@@ -1,11 +1,9 @@
 from rest_framework.viewsets import ModelViewSet
 from .models import Film, Category, Favorite
-from .serializers import Categoryserializers, FilmSerializers, FavoriteSerializer
+from .serializers import CategorySerializers, FilmSerializers, FavoriteSerializer
 from rest_framework.response import Response
-
 from .models import Film, Category, Comment, Like
 from .serializers import CategorySerializers, FilmSerializers, CommentSerializer, LikeSerializer
-from drf_yasg.utils import swagger_auto_schema
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
 from .permissions import BlockPermission
@@ -14,8 +12,6 @@ from .permissions import BlockPermission
 class FilmViewset(ModelViewSet):
     queryset = Film.objects.all()
     serializer_class = FilmSerializers
-
-
 
     def get_permissions(self):
         if self.action == 'list':
@@ -27,8 +23,7 @@ class FilmViewset(ModelViewSet):
 
 class CategoryViewset(ModelViewSet):
     queryset = Category.objects.all()
-
-    serializer_class = Categoryserializers
+    serializer_class = CategorySerializers
 
 class FavoritView(ModelViewSet):
     queryset = Favorite.objects.all()
@@ -42,7 +37,6 @@ class FavoritView(ModelViewSet):
         except:
             return Response('film not found', status = 200)
 
-    serializer_class = CategorySerializers
 
 class LikeViewset(ModelViewSet):
     queryset = Like.objects.all()

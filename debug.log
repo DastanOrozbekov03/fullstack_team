@@ -262,3 +262,210 @@ Traceback (most recent call last):
 django.db.utils.IntegrityError: null value in column "category_id" violates not-null constraint
 DETAIL:  Failing row contains (skkkkkkk, skkkkkkk, , , , , , , 2020, assad, , null).
 
+WARNING -> 2024-04-17 13:52:01,919 -> log -> log.py -> Bad Request: /api/v1/favorite/
+WARNING -> 2024-04-17 13:53:51,416 -> log -> log.py -> Bad Request: /api/v1/favorite/
+WARNING -> 2024-04-17 13:56:00,627 -> log -> log.py -> Bad Request: /api/v1/favorite/
+WARNING -> 2024-04-17 13:56:48,540 -> log -> log.py -> Not Found: /api/v1/favorite/1/
+ERROR -> 2024-04-17 14:02:57,132 -> log -> log.py -> Internal Server Error: /api/v1/favorite/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 28, in create
+    return super().create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x7c20941e1a50>": "Favorite.author" must be a "User" instance.
+ERROR -> 2024-04-17 14:04:01,305 -> log -> log.py -> Internal Server Error: /api/v1/favorite/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 28, in create
+    return super().create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x7c20942b3b20>": "Favorite.author" must be a "User" instance.
+ERROR -> 2024-04-17 14:10:10,878 -> log -> log.py -> Internal Server Error: /api/v1/favorite/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 28, in create
+    return super().create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x776bdf852980>": "Favorite.author" must be a "User" instance.
+WARNING -> 2024-04-17 14:11:52,082 -> log -> log.py -> Not Found: /api/v1/account/
+WARNING -> 2024-04-17 14:12:18,367 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-17 14:13:00,057 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-17 14:13:59,335 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-17 14:15:09,100 -> log -> log.py -> Bad Request: /api/v1/favorite/
+WARNING -> 2024-04-17 14:16:59,681 -> log -> log.py -> Bad Request: /api/v1/like/
+WARNING -> 2024-04-17 14:17:18,980 -> log -> log.py -> Bad Request: /api/v1/like/
+WARNING -> 2024-04-17 14:34:28,296 -> log -> log.py -> Bad Request: /api/v1/comment/
+ERROR -> 2024-04-17 14:34:47,942 -> log -> log.py -> Internal Server Error: /api/v1/comment/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 46, in create
+    return super().create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x7f52eb84a920>": "Comment.author" must be a "User" instance.
+WARNING -> 2024-04-17 15:03:00,359 -> log -> log.py -> Unauthorized: /api/v1/account/login/
+WARNING -> 2024-04-17 15:03:49,995 -> log -> log.py -> Unauthorized: /api/v1/account/login/
+WARNING -> 2024-04-17 15:04:40,939 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-17 15:06:36,844 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-17 15:06:54,746 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-17 15:07:25,738 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-17 15:07:40,797 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-17 15:08:04,263 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-17 15:08:48,847 -> log -> log.py -> Not Found: /api/v1/account/
+WARNING -> 2024-04-17 15:09:43,878 -> log -> log.py -> Unauthorized: /api/v1/like/
+ERROR -> 2024-04-17 15:32:56,207 -> log -> log.py -> Internal Server Error: /api/v1/comment/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 46, in create
+    return super().create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 677, in create
+    obj = self.model(**kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 543, in __init__
+    _setattr(self, field.name, rel_obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x780a2edfd990>": "Comment.author" must be a "User" instance.
