@@ -16,7 +16,7 @@ class RegisterView(APIView):
         serializer.is_valid(raise_exception=True)
         serializer.save()#под капотом есть метод create
         return Response('Вы успешно прошли регистрацию', status=201)
-    
+
 
 class ActivationView(APIView):
     def get(self, request, email, activation_code):

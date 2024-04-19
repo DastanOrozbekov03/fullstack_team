@@ -469,3 +469,289 @@ Traceback (most recent call last):
   File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 284, in __set__
     raise ValueError(
 ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x780a2edfd990>": "Comment.author" must be a "User" instance.
+WARNING -> 2024-04-18 12:14:42,899 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-18 12:16:04,183 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-18 12:16:12,739 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-18 12:16:25,277 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-18 12:16:35,830 -> log -> log.py -> Not Found: /api/v1/login/
+WARNING -> 2024-04-18 12:16:49,918 -> log -> log.py -> Bad Request: /api/v1/account/login/
+WARNING -> 2024-04-18 12:17:39,228 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-18 15:04:03,955 -> log -> log.py -> Not Found: /
+WARNING -> 2024-04-18 15:09:57,432 -> log -> log.py -> Bad Request: /api/v1/hall/
+WARNING -> 2024-04-18 15:12:26,894 -> log -> log.py -> Bad Request: /api/v1/place/
+ERROR -> 2024-04-18 15:25:17,704 -> log -> log.py -> Internal Server Error: /api/v1/seans/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (1, 2024-04-18 15:25:09.62+00, 2024-04-18 15:25:09.62+00, panda, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (1, 2024-04-18 15:25:09.62+00, 2024-04-18 15:25:09.62+00, panda, null).
+
+ERROR -> 2024-04-18 15:33:18,041 -> log -> log.py -> Internal Server Error: /api/v1/seans/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (3, 2024-04-18 15:33:05.425+00, 2024-04-18 15:33:05.425+00, panda, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (3, 2024-04-18 15:33:05.425+00, 2024-04-18 15:33:05.425+00, panda, null).
+
+ERROR -> 2024-04-18 15:34:10,921 -> log -> log.py -> Internal Server Error: /api/v1/seans/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (4, 2024-04-18 15:33:55.431+00, 2024-04-18 15:33:55.431+00, panda, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "hall_id" of relation "cinema_seans" violates not-null constraint
+DETAIL:  Failing row contains (4, 2024-04-18 15:33:55.431+00, 2024-04-18 15:33:55.431+00, panda, null).
+
+WARNING -> 2024-04-19 10:11:06,567 -> log -> log.py -> Not Found: /
+WARNING -> 2024-04-19 10:11:06,688 -> log -> log.py -> Not Found: /favicon.ico
+WARNING -> 2024-04-19 10:13:19,877 -> log -> log.py -> Unauthorized: /api/v1/films/
+WARNING -> 2024-04-19 10:13:30,287 -> log -> log.py -> Not Found: /accounts/login/
+ERROR -> 2024-04-19 10:22:23,694 -> log -> log.py -> Internal Server Error: /api/v1/hall/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "film_id" of relation "cinema_hall" violates not-null constraint
+DETAIL:  Failing row contains (1, hall_1, 40, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "film_id" of relation "cinema_hall" violates not-null constraint
+DETAIL:  Failing row contains (1, hall_1, 40, null).
+

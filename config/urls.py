@@ -36,6 +36,8 @@ urlpatterns = [
     path('docs/', schema_view.with_ui('swagger')),
     path('api/v1/', include('movie.urls')),
     path('api/v1/account/', include('account.urls')),
+    path('api/v1/', include('cinema.urls')),
+    # path('api/v1/', include('booking.urls')),
 ]
 
 urlpatterns += static(
