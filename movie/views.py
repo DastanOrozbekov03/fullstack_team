@@ -8,10 +8,15 @@ from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
 from .permissions import BlockPermission, IsAuthorPermission
 from rest_framework import status
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter
 
 class FilmViewset(ModelViewSet):
     queryset = Film.objects.all()
     serializer_class = FilmSerializers
+    filter_backends = [DjangoFilterBackend, SearchFilter]
+    filterset_fields = ['category', 'slug', 'title'] 
+    search_fields = ['title']
 
     def get_permissions(self):
         if self.action == 'list':
