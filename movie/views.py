@@ -6,8 +6,8 @@ from .models import Film, Category, Comment, Like
 from .serializers import CategorySerializers, FilmSerializers, CommentSerializer, LikeSerializer
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
-from .permissions import BlockPermission
-
+from .permissions import BlockPermission, IsAuthorPermission
+from rest_framework import status
 
 class FilmViewset(ModelViewSet):
     queryset = Film.objects.all()
@@ -41,6 +41,13 @@ class FavoritView(ModelViewSet):
 class LikeViewset(ModelViewSet):
     queryset = Like.objects.all()
     serializer_class = LikeSerializer
+    
+    def get_serializer_context(self):
+        return {'request':self.request}
+
+    def get_serializer(self, *args, **kwargs):
+        kwargs['context'] = self.get_serializer_context()
+        return self.serializer_class(*args,**kwargs)
 
     def get_permissions(self):
         if self.action == 'create':
@@ -49,9 +56,17 @@ class LikeViewset(ModelViewSet):
             self.permission_classes = [AllowAny]
         else:
             self.permission_classes = [BlockPermission]
-        return super().get_permissions()    
+        return super().get_permissions()
 
 class CommentViewset(ModelViewSet):
     queryset = Comment.objects.all()
     serializer_class = CommentSerializer
 
+    def get_permissions(self):
+        if self.action == 'create':
+            self.permission_classes = [IsAuthenticated]
+        elif self.action in 'destroy':
+            self.permission_classes = [AllowAny]
+        else:
+            self.permission_classes = [IsAuthorPermission]
+        return super().get_permissions()

@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     #apps
     'account',
     'movie',
-    # 'cinema'
+    'cinema',
+    'booking',
 
 ]
 
@@ -163,7 +164,7 @@ REST_FRAMEWORK = {
 }
 
 REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES':['rest_framework.authentication.TokenAuthentication'],
+    'DEFAULT_AUTHENTICATION_CLASSES':['rest_framework_simplejwt.authentication.JWTAuthentication'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination', 'PAGE_SIZE': 3
 }
 
@@ -175,35 +176,35 @@ SIMPLE_JWT = {
 import logging
 
 
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": False,
 
-    "formatters": {
-        "main_formatter":{
-            "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
-            "style": "{",
-        },
+#     "formatters": {
+#         "main_formatter":{
+#             "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
+#             "style": "{",
+#         },
 
-    },
+#     },
 
-    "handlers": {
-        "file": {
-            "class": "logging.FileHandler",
-            "formatter": "main_formatter",
-            "filename": "debug.log"
-        }
-    },
+#     "handlers": {
+#         "file": {
+#             "class": "logging.FileHandler",
+#             "formatter": "main_formatter",
+#             "filename": "debug.log"
+#         }
+#     },
 
-    "loggers": {
-        "django.request": {
-            "handlers": ["file"],
-            "level": "WARNING",
-            "propagate": True
-        }
-    }
+#     "loggers": {
+#         "django.request": {
+#             "handlers": ["file"],
+#             "level": "WARNING",
+#             "propagate": True
+#         }
+#     }
 
-}
+# }
 
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
