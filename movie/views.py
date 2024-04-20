@@ -30,6 +30,13 @@ class CategoryViewset(ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializers
 
+    def get_permissions(self):
+        if self.action == 'list':
+            self.permission_classes = [AllowAny]
+        else:
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()
+
 class FavoritView(ModelViewSet):
     queryset = Favorite.objects.all()
     serializer_class = FavoriteSerializer
@@ -80,6 +87,22 @@ class GenreViewset(ModelViewSet):
     queryset = Genre.objects.all()
     serializer_class = GenreSerializer
 
+    def get_permissions(self):
+        if self.action == 'list':
+            self.permission_classes = [AllowAny]
+        else:
+            self.permission_classes = [IsAdminUser]
+        return super().get_permissions()
+
 class RatingViewset(ModelViewSet):
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
+
+    def get_permissions(self):
+        if self.action == 'create':
+            self.permission_classes = [IsAuthenticated]
+        elif self.action in 'destroy':
+            self.permission_classes = [AllowAny]
+        else:
+            self.permission_classes = [IsAuthorPermission]
+        return super().get_permissions()    
