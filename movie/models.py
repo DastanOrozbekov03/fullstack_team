@@ -9,7 +9,7 @@ class Category(models.Model):
     title = models.CharField(max_length=40, unique=True)
     slug = models.SlugField(max_length=40, primary_key=True, blank=True)
 
-    def str(self):
+    def __str__(self):
         return self.title
     
     def save(self, *args, **kwargs):
@@ -41,7 +41,7 @@ class Film(models.Model):
     ganre = models.ManyToManyField(Genre)
     primera = models.CharField(max_length=20, blank=True)
 
-    def str(self):
+    def __str__(self):
         return self.title
     
     def save(self, *args, **kwargs):
@@ -55,20 +55,24 @@ class MovieShorts(models.Model):
 
     def __str__(self) -> str:
         return self.title
-
-class RatingStar(models.Model):
-    value = models.PositiveSmallIntegerField(default=0)
-
-    def __str__(self) -> str:
-        return self.value
     
 class Rating(models.Model):
-    ip = models.CharField(max_length=15, blank=True)
-    star = models.ForeignKey(RatingStar, on_delete=models.CASCADE, verbose_name='Звезда')
-    movie = models.ForeignKey(Film, on_delete=models.CharField, verbose_name='фильм')
+    RATING_CHOICES = [
+        (1, '*'),
+        (2, '**'),
+        (3, '***'),
+        (4, '****'),
+        (5, '*****')
+    ]
+    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name='rating')
+    film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='ratings_film')
+    star = models.PositiveSmallIntegerField(choices=RATING_CHOICES)
         
+    # class Meta:
+    #     unique_together = ('author', 'film')
+
     def __str__(self) -> str:
-        return f"{self.star} - {self.movie}"
+        return f"{self.author} {self.star} - {self.film}"
 
 
 class Favorite(models.Model):
@@ -84,7 +88,7 @@ class Comment(models.Model):
     update_at = models.DateTimeField(auto_now=True)
     parent_comment = models.ForeignKey('self', on_delete=models.CASCADE, related_name='replies', blank=True, null=True)
 
-    def str(self):
+    def __str___(self):
         return self.body
     
 class Like(models.Model):
@@ -92,6 +96,6 @@ class Like(models.Model):
     film = models.ForeignKey(Film, on_delete=models.CASCADE, related_name='likes', null=True)
     # comment = models.ForeignKey('Comment', on_delete=models.CASCADE, related_name='likes', blank=True, null=True)
 
-    def str(self) -> str:
+    def __str__(self) -> str:
         return f'liked by {self.author.email}'
 
