@@ -176,35 +176,35 @@ SIMPLE_JWT = {
 import logging
 
 
-# LOGGING = {
-#     "version": 1,
-#     "disable_existing_loggers": False,
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
 
-#     "formatters": {
-#         "main_formatter":{
-#             "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
-#             "style": "{",
-#         },
+    "formatters": {
+        "main_formatter":{
+            "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
+            "style": "{",
+        },
 
-#     },
+    },
 
-#     "handlers": {
-#         "file": {
-#             "class": "logging.FileHandler",
-#             "formatter": "main_formatter",
-#             "filename": "debug.log"
-#         }
-#     },
+    "handlers": {
+        "file": {
+            "class": "logging.FileHandler",
+            "formatter": "main_formatter",
+            "filename": "debug.log"
+        }
+    },
 
-#     "loggers": {
-#         "django.request": {
-#             "handlers": ["file"],
-#             "level": "WARNING",
-#             "propagate": True
-#         }
-#     }
+    "loggers": {
+        "django.request": {
+            "handlers": ["file"],
+            "level": "WARNING",
+            "propagate": True
+        }
+    }
 
-# }
+}
 
 
 CELERY_BROKER_URL = 'redis://localhost:6379'
