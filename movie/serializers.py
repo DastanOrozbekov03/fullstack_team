@@ -1,5 +1,5 @@
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
-from .models import Film, Category, Like, Comment, Favorite, RatingStar, Rating, MovieShorts, Genre
+from .models import Film, Category, Like, Comment, Favorite, Rating, MovieShorts, Genre
 from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer, ReadOnlyField
 
@@ -13,6 +13,12 @@ class FilmSerializers(ModelSerializer):
     class Meta:
         model = Film
         fields = ('title', 'image', 'ganre', 'year')
+
+    def get_average_rating(self, obj):
+        ratings = Rating.objects.filter(movie=obj)
+        if ratings.exists():
+            return sum([rating.star for rating in ratings]) / len(ratings)
+        return 0    
 
 class FavoriteSerializer(ModelSerializer):
     author = ReadOnlyField(source='author.email')
@@ -68,16 +74,17 @@ class LikeSerializer(ModelSerializer):
 
     def create(self, validated_data):
         request = self.context.get('request')
-        print(request.user)
-        print('!!!!!!!!!!!!!')
+        # print(request.user)
+        # print('!!!!!!!!!!!!!')
         author = request.user
         validated_data['author'] = author
         return super().create(validated_data)
-    
+ 
+
 class RatingSerializer(ModelSerializer):
     class Meta:
         model = Rating
-        fields = 'ip'
+        fields = ('author', 'star', 'film')
 
 class GenreSerializer(ModelSerializer):
     class Meta:

@@ -1,8 +1,8 @@
 from rest_framework.viewsets import ModelViewSet
 from .models import Film, Category, Favorite
-from .serializers import CategorySerializers, FilmSerializers, FavoriteSerializer
+from .serializers import CategorySerializers, FilmSerializers, FavoriteSerializer, RatingSerializer, MovieShortSerilaizer, GenreSerializer
 from rest_framework.response import Response
-from .models import Film, Category, Comment, Like
+from .models import Film, Category, Comment, Like, Rating, MovieShorts, Genre
 from .serializers import CategorySerializers, FilmSerializers, CommentSerializer, LikeSerializer
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
 from rest_framework.decorators import action
@@ -75,3 +75,11 @@ class CommentViewset(ModelViewSet):
         else:
             self.permission_classes = [IsAuthorPermission]
         return super().get_permissions()
+    
+class GenreViewset(ModelViewSet):
+    queryset = Genre.objects.all()
+    serializer_class = GenreSerializer
+
+class RatingViewset(ModelViewSet):
+    queryset = Rating.objects.all()
+    serializer_class = RatingSerializer
