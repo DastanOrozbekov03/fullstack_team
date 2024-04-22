@@ -89,9 +89,9 @@ class RatingSerializer(ModelSerializer):
 class GenreSerializer(ModelSerializer):
     class Meta:
         model = Genre
-        fields = 'title'
+        fields = ('title', 'slug')
     
 class MovieShortSerilaizer(ModelSerializer):
     class Meta:
         model = MovieShorts
-        fields = 'title'
+        fields = ('title')
