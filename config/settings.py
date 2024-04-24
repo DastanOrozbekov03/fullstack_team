@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'account',
     'movie',
     'cinema',
-    'booking',
+    # 'booking',
 
 ]
 
@@ -182,7 +182,7 @@ LOGGING = {
     "disable_existing_loggers": False,
 
     "formatters": {
-        "main_formatter":{
+        "main_formatter": {
             "format": "{levelname} -> {asctime} -> {module} -> {filename} -> {message}",
             "style": "{",
         },
@@ -191,10 +191,11 @@ LOGGING = {
 
     "handlers": {
         "file": {
+            "level": "ERROR",
             "class": "logging.FileHandler",
+            "filename": "debug.log",
             "formatter": "main_formatter",
-            "filename": "debug.log"
-        }
+        },
     },
 
     "loggers": {

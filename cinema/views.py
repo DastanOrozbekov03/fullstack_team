@@ -1,18 +1,31 @@
 from rest_framework.viewsets import ModelViewSet 
-from rest_framework.generics import CreateAPIView
-from .serializers import PlacesSerializers, HallSerializers, SeansSerializers
-from .models import Places, Hall, Seans
+from rest_framework import generics
+from .serializers import HallSerializer, SeatSerializer, SeansSerializer, BookingSerializers
+from .models import Hall, Seat, Seans, Booking
+from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+
+class PermissionMixin:
+    def get_permissions(self):
+        if self.action in ('retrive', 'list'):
+            permissions = [AllowAny]
+        else:
+            permissions = [IsAdminUser]
+        return [permission() for  permission in permissions]        
 
 
-
-class PlacesView(ModelViewSet):
-    queryset = Places.objects.all()
-    serializer_class = PlacesSerializers
-
-class HallViewset(ModelViewSet):
+class HallViewset(PermissionMixin, ModelViewSet):
     queryset = Hall.objects.all()
-    serializer_class = HallSerializers
+    serializer_class = HallSerializer
 
-class SeansViewset(ModelViewSet):
+class SeatList(generics.ListAPIView):
+    queryset = Seat.objects.all()
+    serializer_class = SeatSerializer
+
+class SeansViewset(PermissionMixin, ModelViewSet):
     queryset = Seans.objects.all()
-    serializer_class = SeansSerializers
+    serializer_class = SeansSerializer
+
+class BookingViewset(ModelViewSet):
+    queryset = Booking.objects.all()
+    serializer_class = BookingSerializers
+    permission_classes = [IsAuthenticated]
