@@ -755,3 +755,1125 @@ Traceback (most recent call last):
 django.db.utils.IntegrityError: null value in column "film_id" of relation "cinema_hall" violates not-null constraint
 DETAIL:  Failing row contains (1, hall_1, 40, null).
 
+WARNING -> 2024-04-22 06:55:20,034 -> log -> log.py -> Not Found: /
+WARNING -> 2024-04-22 06:55:20,152 -> log -> log.py -> Not Found: /favicon.ico
+ERROR -> 2024-04-22 06:55:26,540 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1133, in get_field_names
+    raise TypeError(
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+ERROR -> 2024-04-22 06:57:47,945 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1133, in get_field_names
+    raise TypeError(
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+ERROR -> 2024-04-22 06:59:09,596 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1133, in get_field_names
+    raise TypeError(
+TypeError: The `fields` option must be a list or tuple or "__all__". Got str.
+WARNING -> 2024-04-22 07:10:23,480 -> log -> log.py -> Unauthorized: /api/v1/like/
+WARNING -> 2024-04-22 07:11:56,805 -> log -> log.py -> Not Found: /api/v1/login/
+WARNING -> 2024-04-22 07:12:10,185 -> log -> log.py -> Bad Request: /api/v1/account/login/
+WARNING -> 2024-04-22 07:12:16,707 -> log -> log.py -> Unauthorized: /api/v1/account/login/
+WARNING -> 2024-04-22 07:12:33,323 -> log -> log.py -> Unauthorized: /api/v1/account/register/
+WARNING -> 2024-04-22 07:12:52,695 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-22 07:13:02,623 -> log -> log.py -> Unauthorized: /api/v1/account/login/
+WARNING -> 2024-04-22 07:14:27,174 -> log -> log.py -> Not Found: /favicon.ico
+WARNING -> 2024-04-22 07:16:33,344 -> log -> log.py -> Not Found: /api/v1/account//login
+ERROR -> 2024-04-22 07:17:01,498 -> log -> log.py -> Internal Server Error: /api/v1/account/login
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/account/login/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING -> 2024-04-22 07:17:34,345 -> log -> log.py -> Forbidden: /api/v1/genre/
+WARNING -> 2024-04-22 07:18:09,518 -> log -> log.py -> Not Found: /api/v1/cotegie/
+WARNING -> 2024-04-22 07:18:14,655 -> log -> log.py -> Not Found: /api/v1/cotegiore/
+WARNING -> 2024-04-22 07:18:19,112 -> log -> log.py -> Not Found: /api/v1//
+WARNING -> 2024-04-22 11:47:27,465 -> log -> log.py -> Not Found: /
+ERROR -> 2024-04-22 12:01:41,520 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'genre' was declared on serializer FilmSerializers, but has not been included in the 'fields' option.
+ERROR -> 2024-04-22 12:02:10,547 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'genre' was declared on serializer FilmSerializers, but has not been included in the 'fields' option.
+ERROR -> 2024-04-22 12:02:10,693 -> log -> log.py -> Internal Server Error: /docs/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/views.py", line 96, in get
+    schema = generator.get_schema(request, self.public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 276, in get_schema
+    paths, prefix = self.get_paths(endpoints, components, request, public)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 482, in get_paths
+    operation = self.get_operation(view, path, prefix, method, components, request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/generators.py", line 524, in get_operation
+    operation = view_inspector.get_operation(operation_keys)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 45, in get_operation
+    responses = self.get_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 180, in get_responses
+    response_serializers = self.get_response_serializers()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 235, in get_response_serializers
+    responses = self.get_default_responses()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/view.py", line 211, in get_default_responses
+    default_schema = self.serializer_to_schema(default_schema) or ''
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 438, in serializer_to_schema
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 38, in get_schema
+    return self.probe_field_inspectors(serializer, openapi.Schema, self.use_definitions)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 228, in probe_field_inspectors
+    return self.probe_inspectors(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/base.py", line 110, in probe_inspectors
+    result = method(obj, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 129, in field_to_swagger_object
+    actual_schema = definitions.setdefault(ref_name, make_schema_definition)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/openapi.py", line 685, in setdefault
+    ret = maker()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/drf_yasg/inspectors/field.py", line 98, in make_schema_definition
+    for property_name, child in serializer.fields.items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'genre' was declared on serializer FilmSerializers, but has not been included in the 'fields' option.
+ERROR -> 2024-04-22 12:06:23,388 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 439, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 106, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Film' object has no attribute 'genre'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 472, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `genre` on serializer `FilmSerializers`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Film` instance.
+Original exception text was: 'Film' object has no attribute 'genre'.
+ERROR -> 2024-04-22 12:07:24,347 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 538, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 1872, in to_representation
+    return method(value)
+  File "/home/dastan/Desktop/fullstack/movie/serializers.py", line 33, in get_average_rating
+    ratings = Rating.objects.filter(movie=obj)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1476, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1494, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1501, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1613, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1645, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1495, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg, summarize)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1307, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1772, in names_to_path
+    raise FieldError(
+django.core.exceptions.FieldError: Cannot resolve keyword 'movie' into field. Choices are: author, author_id, film, film_id, id, star
+ERROR -> 2024-04-22 12:08:33,826 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 439, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 106, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'Film' object has no attribute 'genre'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    attribute = field.get_attribute(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 472, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `genre` on serializer `FilmSerializers`.
+The serializer field might be named incorrectly and not match any attribute or key on the `Film` instance.
+Original exception text was: 'Film' object has no attribute 'genre'.
+ERROR -> 2024-04-22 12:11:22,403 -> log -> log.py -> Internal Server Error: /api/v1/films/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1079, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1175, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'ganre' was declared on serializer FilmSerializers, but has not been included in the 'fields' option.
+ERROR -> 2024-04-22 12:18:05,319 -> log -> log.py -> Internal Server Error: /api/v1/hall/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column cinema_hall.slug does not exist
+LINE 1: SELECT 1 AS "a" FROM "cinema_hall" WHERE "cinema_hall"."slug...
+                                                 ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 759, in run_validation
+    return super().run_validation(data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 541, in run_validation
+    self.run_validators(value)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 553, in run_validators
+    validator(value, self)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/validators.py", line 73, in __call__
+    if qs_exists(queryset):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/validators.py", line 21, in qs_exists
+    return queryset.exists()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1288, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 659, in has_results
+    return compiler.has_results()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column cinema_hall.slug does not exist
+LINE 1: SELECT 1 AS "a" FROM "cinema_hall" WHERE "cinema_hall"."slug...
+                                                 ^
+
+WARNING -> 2024-04-22 13:21:02,170 -> log -> log.py -> Bad Request: /api/v1/hall/
+ERROR -> 2024-04-22 13:47:38,535 -> log -> log.py -> Internal Server Error: /api/v1/booking/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "seat_numbers_id" of relation "booking_booking" does not exist
+LINE 1: ..."booking_booking" ("showtime_id", "user_name_id", "seat_numb...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "seat_numbers_id" of relation "booking_booking" does not exist
+LINE 1: ..."booking_booking" ("showtime_id", "user_name_id", "seat_numb...
+                                                             ^
+
+ERROR -> 2024-04-22 13:48:53,769 -> log -> log.py -> Internal Server Error: /api/v1/booking/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "seat_numbers_id" of relation "booking_booking" does not exist
+LINE 1: ..."booking_booking" ("showtime_id", "user_name_id", "seat_numb...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "seat_numbers_id" of relation "booking_booking" does not exist
+LINE 1: ..."booking_booking" ("showtime_id", "user_name_id", "seat_numb...
+                                                             ^
+
+ERROR -> 2024-04-22 14:02:27,136 -> log -> log.py -> Internal Server Error: /api/v1/booking/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+ERROR -> 2024-04-22 14:08:06,024 -> log -> log.py -> Internal Server Error: /api/v1/booking/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+WARNING -> 2024-04-22 16:59:52,286 -> log -> log.py -> Not Found: /api/v1/account/
+ERROR -> 2024-04-22 17:00:34,119 -> log -> log.py -> Internal Server Error: /api/v1/account/register
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/deprecation.py", line 136, in __call__
+    response = self.process_response(request, response)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/middleware/common.py", line 108, in process_response
+    return self.response_redirect_class(self.get_full_path_with_slash(request))
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/middleware/common.py", line 87, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via POST, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining POST data. Change your form to point to 127.0.0.1:8000/api/v1/account/register/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+WARNING -> 2024-04-22 17:01:03,571 -> log -> log.py -> Unauthorized: /api/v1/account/register/
+WARNING -> 2024-04-22 17:04:28,880 -> log -> log.py -> Bad Request: /api/v1/comment/
+WARNING -> 2024-04-22 17:05:25,258 -> log -> log.py -> Bad Request: /api/v1/booking/
+WARNING -> 2024-04-22 17:06:05,562 -> log -> log.py -> Bad Request: /api/v1/booking/
+ERROR -> 2024-04-22 17:06:19,084 -> log -> log.py -> Internal Server Error: /api/v1/booking/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 24, in perform_create
+    serializer.save()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 208, in save
+    self.instance = self.create(validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 989, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 679, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 822, in save
+    self.save_base(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 909, in save_base
+    updated = self._save_table(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1067, in _save_table
+    results = self._do_insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/base.py", line 1108, in _do_insert
+    return manager._insert(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1847, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1823, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "seat_id" of relation "booking_booking" does not exist
+LINE 1: INSERT INTO "booking_booking" ("seat_id", "seans_id", "user_...
+                                       ^
+
+WARNING -> 2024-04-22 17:13:17,824 -> log -> log.py -> Unauthorized: /api/v1/account/register/
+WARNING -> 2024-04-22 17:14:31,798 -> log -> log.py -> Bad Request: /api/v1/booking/
+WARNING -> 2024-04-22 17:14:53,188 -> log -> log.py -> Bad Request: /api/v1/seans/
+WARNING -> 2024-04-22 17:16:19,283 -> log -> log.py -> Bad Request: /api/v1/seans/
+WARNING -> 2024-04-23 13:15:17,067 -> log -> log.py -> Unauthorized: /api/v1/booking/
+WARNING -> 2024-04-23 13:16:22,496 -> log -> log.py -> Bad Request: /api/v1/booking/
+WARNING -> 2024-04-23 13:17:09,282 -> log -> log.py -> Bad Request: /api/v1/seans/
+WARNING -> 2024-04-23 13:17:11,909 -> log -> log.py -> Bad Request: /api/v1/seans/
+WARNING -> 2024-04-23 13:17:27,884 -> log -> log.py -> Bad Request: /api/v1/seans/
+WARNING -> 2024-04-23 13:18:48,529 -> log -> log.py -> Not Found: /
+ERROR -> 2024-04-23 13:53:16,021 -> log -> log.py -> Internal Server Error: /api/v1/seans/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column cinema_seans.slug does not exist
+LINE 1: SELECT 1 AS "a" FROM "cinema_seans" WHERE "cinema_seans"."sl...
+                                                  ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 18, in create
+    serializer.is_valid(raise_exception=True)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 223, in is_valid
+    self._validated_data = self.run_validation(self.initial_data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 442, in run_validation
+    value = self.to_internal_value(data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 499, in to_internal_value
+    validated_value = field.run_validation(primitive_value)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 759, in run_validation
+    return super().run_validation(data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 541, in run_validation
+    self.run_validators(value)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/fields.py", line 553, in run_validators
+    validator(value, self)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/validators.py", line 73, in __call__
+    if qs_exists(queryset):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/validators.py", line 21, in qs_exists
+    return queryset.exists()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/query.py", line 1288, in exists
+    return self.query.has_results(using=self.db)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/query.py", line 659, in has_results
+    return compiler.has_results()
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1530, in has_results
+    return bool(self.execute_sql(SINGLE))
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column cinema_seans.slug does not exist
+LINE 1: SELECT 1 AS "a" FROM "cinema_seans" WHERE "cinema_seans"."sl...
+                                                  ^
+
+WARNING -> 2024-04-23 14:18:02,208 -> log -> log.py -> Unauthorized: /api/v1/account/register/
+WARNING -> 2024-04-23 14:18:09,328 -> log -> log.py -> Bad Request: /api/v1/account/register/
+WARNING -> 2024-04-23 14:19:50,720 -> log -> log.py -> Bad Request: /api/v1/booking/
+ERROR -> 2024-04-24 06:48:07,583 -> log -> log.py -> Internal Server Error: /api/v1/seans/
+Traceback (most recent call last):
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/viewsets.py", line 124, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 795, in data
+    ret = super().data
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 249, in data
+    self._data = self.to_representation(self.instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 713, in to_representation
+    return [
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 714, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 523, in to_representation
+    for field in fields:
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 384, in _readable_fields
+    for field in self.fields.values():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 372, in fields
+    for key, value in self.get_fields().items():
+  File "/home/dastan/Desktop/fullstack/venv/lib/python3.10/site-packages/rest_framework/serializers.py", line 1059, in get_fields
+    assert hasattr(self.Meta, 'model'), (
+AssertionError: Class SeansSerializer missing "Meta.model" attribute

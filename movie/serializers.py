@@ -9,11 +9,25 @@ class CategorySerializers(ModelSerializer):
         model = Category
         fields = '__all__'
 
+
+class GenreSerializer(ModelSerializer):
+    class Meta:
+        model = Genre
+        fields = ['title']
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance) 
+        representation['genre'] = instance.title
+        return representation
+
+
 class FilmSerializers(ModelSerializer):
+    ganre = GenreSerializer(many=True) 
+
     class Meta:
         model = Film
-        fields = ('title', 'image', 'ganre', 'year')
-
+        fields = ['title', 'image', 'ganre', 'year']
+  
     def get_average_rating(self, obj):
         ratings = Rating.objects.filter(movie=obj)
         if ratings.exists():
@@ -39,8 +53,6 @@ class FilmListSerializers(ModelSerializer):
 
 class CommentSerializer(ModelSerializer):
     author = ReadOnlyField(source='author.email')
-    # replies = serializers.SerializerMethodField()
-
 
     class Meta:
         model = Comment
@@ -51,18 +63,6 @@ class CommentSerializer(ModelSerializer):
         validated_data['author'] = user
         return super().create(validated_data)        
     
-    # def get_likes_count(self, instanse):
-    #     return instanse.likes.count()
-    
-    # def to_representation(self, instance):
-    #     representation = super().to_representation(instance)
-    #     representation['likes_count'] = self.get_likes_count(instance)
-    #     return representation
-    
-    # def get_replies(self, obj):
-    #     replies = Comment.objects.filter(parent_comment=obj)
-    #     serializer = CommentSerializer(replies, many=True)
-    #     return serializer.data
 
 class LikeSerializer(ModelSerializer):
     author = ReadOnlyField(source = 'author.email')
@@ -74,8 +74,6 @@ class LikeSerializer(ModelSerializer):
 
     def create(self, validated_data):
         request = self.context.get('request')
-        # print(request.user)
-        # print('!!!!!!!!!!!!!')
         author = request.user
         validated_data['author'] = author
         return super().create(validated_data)
@@ -86,12 +84,7 @@ class RatingSerializer(ModelSerializer):
         model = Rating
         fields = ('author', 'star', 'film')
 
-class GenreSerializer(ModelSerializer):
-    class Meta:
-        model = Genre
-        fields = 'title'
-    
 class MovieShortSerilaizer(ModelSerializer):
     class Meta:
         model = MovieShorts
-        fields = 'title'
+        fields = ('title')
