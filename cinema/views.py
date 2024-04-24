@@ -3,6 +3,9 @@ from rest_framework import generics
 from .serializers import HallSerializer, SeatSerializer, SeansSerializer, BookingSerializers
 from .models import Hall, Seat, Seans, Booking
 from rest_framework.permissions import IsAdminUser, AllowAny, IsAuthenticated
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+
 
 class PermissionMixin:
     def get_permissions(self):
@@ -29,3 +32,7 @@ class BookingViewset(ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializers
     permission_classes = [IsAuthenticated]
+
+    @method_decorator(cache_page(60*5))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
