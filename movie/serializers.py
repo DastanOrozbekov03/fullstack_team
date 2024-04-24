@@ -39,7 +39,7 @@ class FavoriteSerializer(ModelSerializer):
 
     class Meta:
         model = Favorite
-        fields = ('author', 'film')
+        fields = ('author', 'film') 
 
     def create(self, validated_data):
         author = self.context['request'].user

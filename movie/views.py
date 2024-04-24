@@ -10,6 +10,8 @@ from .permissions import BlockPermission, IsAuthorPermission
 from rest_framework import status
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
 
 class FilmViewset(ModelViewSet):
     queryset = Film.objects.all()
@@ -17,6 +19,10 @@ class FilmViewset(ModelViewSet):
     filter_backends = [DjangoFilterBackend, SearchFilter]
     filterset_fields = ['category', 'slug', 'title'] 
     search_fields = ['title']
+
+    @method_decorator(cache_page(60*5))
+    def list(self, request, *args, **kwargs):
+        return super().list(request, *args, **kwargs)
 
     def get_permissions(self):
         if self.action == 'list':

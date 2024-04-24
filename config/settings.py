@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'account',
     'movie',
     'cinema',
-    # 'booking',
+    # 'telebot',
 
 ]
 
