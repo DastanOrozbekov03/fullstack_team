@@ -88,3 +88,4 @@ class MovieShortSerilaizer(ModelSerializer):
     class Meta:
         model = MovieShorts
         fields = ('title')
+
